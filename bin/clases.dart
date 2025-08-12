@@ -34,6 +34,38 @@ class Timer{
   }
 }
 
+class Vehicle{
+  String type = 'Generic Vehicle';
+  describe(){
+    print('This is a $type.');
+  }
+}
+class Car extends Vehicle{
+  int wheels = 4;
+}
+
+class Employee{
+  String name;
+  int id;
+  Employee(this.name, this.id);
+}
+
+class Manager extends Employee{
+  String department;
+  Manager(String name, int id, this.department) : super(name, id);
+}
+
+class Animales{
+  void makeSound(){
+    print('Some generic animal sound');
+  }
+}
+class Dog extends Animales{
+  void makeSound(){
+    super.makeSound();
+    print('Woof!');
+  }
+}
 void main() {
   Animal a = Animal();
   a.name = 'Generic';
@@ -51,4 +83,20 @@ void main() {
 
   Timer t = Timer(seconds: 10);
   t.start();
+
+  Car myCar = Car();
+  print(myCar.type);
+  print(myCar.wheels);
+  myCar.describe();
+
+  Car c = Car();
+  print('Inherited property: ${c.type}');
+  print('Calling inherited method:');
+  c.describe();
+
+  Manager mgr = Manager('Alice', 1001, 'HR');
+  print('${mgr.name}, ID: ${mgr.id}, Dept: ${mgr.department}');
+
+  Dog myDog = Dog();
+  myDog.makeSound();
 }
