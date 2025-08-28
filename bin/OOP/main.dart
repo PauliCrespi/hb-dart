@@ -20,24 +20,15 @@ void main() {
   controller.addDevice(Light());
   controller.addDevice(Thermostat());
   controller.runDiagnostics();
+  controller.addDevice(Alarm());
 
-  final light1 = Light();
-  final thermostat1 = Thermostat();
-  final alarm1 = Alarm();
-
-  // encender algunos, dejar otros apagados
-  light1.turnOn();
-  thermostat1.turnOn();
-  thermostat1.setTemperature = 22; // setTemperature
-
-  // disparar comportamiento específico del Alarm
-  final msg = alarm.triggerAlarm(); // puede ser null
+  final msg = alarm.triggerAlarm(); 
 
   // reporte final (una línea por dispositivo)
   print('Smart Light: ${light.isOn ? 'ON' : 'OFF'}');
-  print('Thermostat: ${thermostat1.isOn ? 'ON' : 'OFF'}, '
-        '${thermostat1.getTemperature}°C, '
-        'EcoMode: ${thermostat1.isEcoMode}');
+  print('Thermostat: ${thermostat.isOn ? 'ON' : 'OFF'}, '
+        '${thermostat.getTemperature}°C, '
+        'EcoMode: ${thermostat.isEcoMode}');
   print('Alarm: ${alarm.isOn ? 'ON' : 'OFF'}'
         '${msg != null ? ' — $msg' : ''}');
 }

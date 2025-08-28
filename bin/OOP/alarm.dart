@@ -1,4 +1,4 @@
-import 'smart_device.dart';
+import '../OOP/smart_device.dart';
 
 class Alarm extends SmartDevice{
   void turnOn(){

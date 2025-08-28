@@ -1,6 +1,3 @@
-import 'dart:io';
-import 'package:intl/intl.dart';
-import 'package:characters/characters.dart';
 
 class Animal{
   var name;
