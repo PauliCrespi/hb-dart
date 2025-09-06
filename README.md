@@ -1,49 +1,29 @@
-A server app built using [Shelf](https://pub.dev/packages/shelf),
-configured to enable running with [Docker](https://www.docker.com/).
+# 🚀 Holberton Dart Project
 
-This sample code handles HTTP GET requests to `/` and `/echo/<message>`
+This project was developed as part of my training at **Holberton School Uruguay**.  
+The goal was to practice **Dart** as a programming language, covering logic, data structures, and building applications.
 
-# Running the sample
+---
 
-## Running with the Dart SDK
+## 📌 Description
 
-You can run the example with the [Dart SDK](https://dart.dev/get-dart)
-like this:
+The project includes the development of a **Dart application** with the following features:
 
-```
-$ dart run bin/server.dart
-Server listening on port 8080
-```
+- ✅ Problem-solving and logic exercises  
+- ✅ Console scripts (CLI tools) for automation  
+- ✅ A **REST API** built with [`shelf`](https://pub.dev/packages/shelf)  
 
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
-```
+Through this project, I gained hands-on experience in **structured programming, package management, and basic software architecture**.
 
-## Running with Docker
+---
 
-If you have [Docker Desktop](https://www.docker.com/get-started) installed, you
-can build and run with the `docker` command:
+## 🛠️ Technologies Used
 
-```
-$ docker build . -t myserver
-$ docker run -it -p 8080:8080 myserver
-Server listening on port 8080
-```
+- [Dart](https://dart.dev/) – Main programming language  
+- [Shelf](https://pub.dev/packages/shelf) – HTTP server framework (if API included)  
+- Git & GitHub – Version control  
 
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
-```
+---
 
-You should see the logging printed in the first terminal:
-```
-2021-05-06T15:47:04.620417  0:00:00.000158 GET     [200] /
-2021-05-06T15:47:08.392928  0:00:00.001216 GET     [200] /echo/I_love_Dart
-```
+
+
